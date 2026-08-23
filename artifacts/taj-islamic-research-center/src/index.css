@@ -148,6 +148,9 @@
 .reveal-delay-2 { animation-delay: .24s; }
 .reveal-delay-3 { animation-delay: .36s; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.partners-track { animation: partners-scroll 28s linear infinite; }
+@keyframes partners-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 1.25rem)); } }
+.partners-window:hover .partners-track { animation-play-state: paused; }
 .arch-frame { border-radius: 52% 52% 4px 4px / 28% 28% 4px 4px; }
 .soft-grid {
   background-image: linear-gradient(hsl(var(--primary) / .055) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / .055) 1px, transparent 1px);
@@ -156,4 +159,5 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { animation: none; }
+  .partners-track { animation-duration: 22s; }
 }

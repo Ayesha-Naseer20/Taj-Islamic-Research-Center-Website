@@ -143,10 +143,18 @@ const programCards = [
 ];
 
 const researchCards = [
-  { title: 'Books', icon: BookOpen },
-  { title: 'E-Library', icon: Library },
-  { title: 'Taj Magazine', icon: Newspaper },
-  { title: 'Taj Islamicus Journal', icon: BookMarked },
+  { title: 'Books', image: '/original-assets/Research_1787475153261.jpg', icon: BookOpen },
+  { title: 'E-Library', image: '/original-assets/elibrary_-_Copy_1787475123120.png', icon: Library },
+  { title: 'Taj Magazine', image: '/original-assets/TajMagzines_1787475153262.jpg', icon: Newspaper },
+  { title: 'Taj Islamicus Journal', image: '/original-assets/TajJournels_1787475153262.png', icon: BookMarked },
+];
+
+const partnerLogos = [
+  { name: 'GIFT University', image: '/original-assets/GIFTUNiversity_-_Copy_1787475123121.png' },
+  { name: 'IDARA Fikr-e-Jadeed', image: '/original-assets/IradaLOgo_-_Copy_1787475123121.png' },
+  { name: 'ORE', image: '/original-assets/LOGO-Ore-qw7tenvi26wmzqjb5m5wqvb403krszza8vl6aryswg_-_Copy_1787475123122.png' },
+  { name: 'VCP', image: '/original-assets/VCPLogo_1787475153262.jpg' },
+  { name: 'SMIT', image: '/original-assets/image_1787473708571.png' },
 ];
 
 function scrollToHash(href: string | undefined, close?: () => void) {
@@ -456,13 +464,18 @@ function Home() {
           <div className="mx-auto max-w-[1240px]">
             <SectionHeading title="Research & Publications" subtitle="Our Research & Publications reflect a commitment to advancing knowledge, fostering innovation, and addressing contemporary challenges through rigorous analysis and impactful dissemination." />
             <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {researchCards.map(({ title, icon: Icon }, index) => (
-                <button type="button" key={title} onClick={() => scrollToHash('#contact')} data-testid={`card-research-${index}`} className="group relative flex min-h-[190px] flex-col justify-between border border-[hsl(var(--border))] bg-[hsl(var(--card))] p-6 text-left transition-colors hover:border-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]">
-                  <span className="flex h-11 w-11 items-center justify-center border border-[hsl(var(--accent))] text-[hsl(var(--primary))] transition-colors group-hover:text-[hsl(var(--secondary))]"><Icon size={20} strokeWidth={1.5} /></span>
+              {researchCards.map(({ title, image, icon: Icon }, index) => (
+                <button type="button" key={title} onClick={() => scrollToHash('#contact')} data-testid={`card-research-${index}`} className="group relative overflow-hidden border border-[hsl(var(--border))] bg-[hsl(var(--card))] text-left transition-colors hover:border-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]">
+                  <div className="aspect-[1.65] overflow-hidden bg-white">
+                    <img src={image} alt={title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="flex min-h-[116px] flex-col justify-between p-5">
+                    <span className="flex h-9 w-9 items-center justify-center border border-[hsl(var(--accent))] text-[hsl(var(--primary))] transition-colors group-hover:text-[hsl(var(--secondary))]"><Icon size={17} strokeWidth={1.5} /></span>
                   <span className="flex items-end justify-between gap-3 font-display text-xl text-[hsl(var(--primary))] group-hover:text-[hsl(var(--primary-foreground))]">
                     {title}
                     <ArrowUpRight size={17} className="mb-1 shrink-0 text-[hsl(var(--accent))]" />
                   </span>
+                  </div>
                 </button>
               ))}
             </div>
@@ -475,8 +488,14 @@ function Home() {
               <div className="mb-6 h-px w-10 bg-[hsl(var(--secondary))]" />
               <h2 className="font-display text-4xl text-[hsl(var(--primary-foreground))] sm:text-5xl">Our Partners</h2>
             </div>
-            <div className="overflow-hidden border border-[hsl(var(--primary-foreground)/.2)] bg-[hsl(var(--primary-foreground)/.96)] p-5 sm:p-8">
-              <img src="/reference-assets/partners.png" alt="Our Partners" className="h-auto w-full object-contain mix-blend-multiply" />
+            <div className="partners-window overflow-hidden border border-[hsl(var(--primary-foreground)/.2)] bg-[hsl(var(--primary-foreground)/.96)] py-6 sm:py-8">
+              <div className="partners-track flex w-max items-center gap-5 px-5 sm:gap-8 sm:px-8">
+                {[...partnerLogos, ...partnerLogos].map(({ name, image }, index) => (
+                  <div key={`${name}-${index}`} className="flex h-28 w-36 shrink-0 items-center justify-center bg-white p-3 sm:h-32 sm:w-44">
+                    <img src={image} alt={name} className="max-h-full max-w-full object-contain" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
