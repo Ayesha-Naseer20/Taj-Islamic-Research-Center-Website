@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Taj Islamic Research Center"
+description = "A refined, responsive institutional website for the Taj Islamic Research Center, preserving the original content while improving navigation, readability, visual hierarchy, and mobile usability."
+version = "1.0.0"
+id = "artifacts/taj-islamic-research-center"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19385
+
+[services.development]
+run = "pnpm --filter @workspace/taj-islamic-research-center run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/taj-islamic-research-center", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/taj-islamic-research-center/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19385"
+BASE_PATH = "/"
