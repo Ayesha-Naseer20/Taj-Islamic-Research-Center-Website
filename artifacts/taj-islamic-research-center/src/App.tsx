@@ -129,17 +129,17 @@ const socials = [
 ];
 
 const aboutCards = [
-  { id: 'vision-mission', title: 'Our Vision', image: '/reference-assets/vision.png', icon: Target },
-  { id: 'mission', title: 'Our Mission', image: '/reference-assets/mission.png', icon: Search },
-  { id: 'advisory-board', title: 'Advisory Board', image: '/reference-assets/board.png', icon: Users },
-  { id: 'our-team', title: 'Our Team', image: '/reference-assets/team.png', icon: GraduationCap },
+  { id: 'vision-mission', title: 'Our Vision', image: '/original-assets/image_1787473586930.png', icon: Target },
+  { id: 'mission', title: 'Our Mission', image: '/original-assets/image_1787473593354.png', icon: Search },
+  { id: 'advisory-board', title: 'Advisory Board', image: '/original-assets/image_1787473599431.png', icon: Users },
+  { id: 'our-team', title: 'Our Team', image: '/original-assets/image_1787473607185.png', icon: GraduationCap },
 ];
 
 const programCards = [
-  { title: 'Research & Publications', image: '/reference-assets/research.png', icon: BookMarked },
-  { title: 'Seminars & Workshops', image: '/reference-assets/seminars.png', icon: Presentation },
-  { title: 'Youth Empowerment', image: '/reference-assets/youth.png', icon: Users },
-  { title: 'Short Courses', image: '/reference-assets/courses.png', icon: GraduationCap },
+  { title: 'Research & Publications', image: '/original-assets/image_1787473617665.png', icon: BookMarked },
+  { title: 'Seminars & Workshops', image: '/original-assets/image_1787473625400.png', icon: Presentation },
+  { title: 'Youth Empowerment', image: '/original-assets/image_1787473645668.png', icon: Users },
+  { title: 'Short Courses', image: '/original-assets/image_1787473656116.png', icon: GraduationCap },
 ];
 
 const researchCards = [
@@ -319,7 +319,7 @@ function Header() {
       <div className="mx-auto flex h-[74px] max-w-[1440px] items-center px-5 sm:px-8 lg:px-10">
         <button type="button" onClick={() => scrollToHash('#home')} aria-label="Taj Islamic Research Center home" data-testid="button-logo-home" className="group mr-auto flex items-center gap-3">
           <span className="flex h-11 w-11 items-center justify-center overflow-hidden bg-[hsl(var(--sidebar))] ring-1 ring-[hsl(var(--accent)/.65)]">
-            <img src="/reference-assets/logo.png" alt="Taj Islamic Research Center" className="h-full w-full object-cover" />
+            <img src="/original-assets/image_1787473574802.png" alt="Taj Islamic Research Center" className="h-full w-full object-cover" />
           </span>
           <span className="hidden text-left sm:block">
             <span className="block font-display text-[15px] leading-none text-[hsl(var(--primary))]">Taj Islamic</span>
@@ -399,7 +399,7 @@ function Home() {
               <div className="absolute inset-0 bg-[hsl(var(--primary)/.2)]" />
               <div className="absolute left-7 top-7 z-10 h-20 w-20 border-l border-t border-[hsl(var(--secondary)/.7)] sm:left-12 sm:top-12 sm:h-28 sm:w-28" />
               <div className="absolute bottom-7 right-7 z-10 h-20 w-20 border-b border-r border-[hsl(var(--secondary)/.7)] sm:bottom-12 sm:right-12 sm:h-28 sm:w-28" />
-              <img src="/reference-assets/team-hero.png" alt="Taj Islamic Research Center community" className="h-full w-full object-cover object-center opacity-95" />
+              <img src="/original-assets/image_1787473580327.png" alt="Taj Islamic Research Center community" className="h-full w-full object-cover object-center opacity-95" />
               <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--sidebar)/.78)] via-transparent to-[hsl(var(--primary)/.12)]" />
               <div className="absolute bottom-10 left-8 right-8 flex items-end justify-between sm:bottom-14 sm:left-14 sm:right-14">
                 <span className="font-mono-ui text-[10px] uppercase tracking-[.22em] text-[hsl(var(--sidebar-foreground)/.7)]">Taj Islamic Research Center</span>
@@ -504,7 +504,7 @@ function Home() {
           <div className="grid gap-12 border-b border-[hsl(var(--sidebar-border))] pb-14 lg:grid-cols-[1.1fr_.9fr_.7fr]">
             <div>
               <div className="flex items-center gap-3">
-                <img src="/reference-assets/logo.png" alt="Taj Islamic Research Center" className="h-12 w-12 object-cover ring-1 ring-[hsl(var(--secondary)/.6)]" />
+                <img src="/original-assets/image_1787473574802.png" alt="Taj Islamic Research Center" className="h-12 w-12 object-cover ring-1 ring-[hsl(var(--secondary)/.6)]" />
                 <h2 className="font-display text-2xl text-[hsl(var(--sidebar-foreground))]">Contact Us</h2>
               </div>
               <p className="mt-6 max-w-sm font-mono-ui text-[10px] uppercase leading-6 tracking-[.16em] text-[hsl(var(--sidebar-foreground)/.55)]">Taj Islamic Research Center</p>
