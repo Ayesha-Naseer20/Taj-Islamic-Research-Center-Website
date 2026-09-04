@@ -1,0 +1,9 @@
+   {
+     "buildCommand": "pnpm run build",
+     "functions": {
+       "dist/app.mjs": {}
+     },
+     "rewrites": [
+       { "source": "/(.*)", "destination": "/dist/app.mjs" }
+     ]
+   }
