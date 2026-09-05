@@ -1,9 +1,7 @@
    {
+     "$schema": "https://openapi.vercel.sh/vercel.json",
      "buildCommand": "pnpm --filter @workspace/api-server run build",
-     "functions": {
-       "dist/app.mjs": {}
-     },
      "rewrites": [
-       { "source": "/(.*)", "destination": "/dist/app.mjs" }
+       { "source": "/(.*)", "destination": "/api" }
      ]
    }
